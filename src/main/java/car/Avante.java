@@ -1,9 +1,9 @@
 package car;
 
-public class Sonata extends Car {
-    private final double FUEL_EFFICIENCY = 10;
+public class Avante extends Car {
+    private final double FUEL_EFFICIENCY = 15;
 
-    public Sonata(double tripDistance) {
+    public Avante(double tripDistance) {
         super(tripDistance);
     }
 
