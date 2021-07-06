@@ -7,13 +7,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CarTest {
 
     @Test
-    void sonateTest() {
+    void sonataTest() {
 
         // given
-        Sonate sonata = new Sonate(150);
+        Sonata sonata = new Sonata(10);
 
         // then
-        assertThat(sonata.getDistance()).isEqualTo(150);
+        assertThat(sonata.getTripDistance()).isEqualTo(10);
+        assertThat(sonata.getDistancePerLitter()).isEqualTo(1d);
 
     }
 }
