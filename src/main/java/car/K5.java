@@ -2,7 +2,7 @@ package car;
 
 public class K5 extends Car {
     private final double FUEL_EFFICIENCY = 13;
-    private final String NAME = "Avante";
+    private final String NAME = "K5";
 
     public K5(double tripDistance) {
         super(tripDistance);
@@ -19,7 +19,7 @@ public class K5 extends Car {
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return this.NAME;
     }
 }

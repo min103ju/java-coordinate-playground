@@ -19,7 +19,7 @@ public class Sonata extends Car {
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return this.NAME;
     }
 }
