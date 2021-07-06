@@ -1,7 +1,7 @@
 package car;
 
 public abstract class Car {
-    private final double tripDistance;
+    protected final double tripDistance;
 
     public Car(double tripDistance) {
         this.tripDistance = tripDistance;

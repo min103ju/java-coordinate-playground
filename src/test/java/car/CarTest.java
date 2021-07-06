@@ -9,7 +9,7 @@ public class CarTest {
     @Test
     void k5Test() {
         // given
-        K5 k5 = new K5(13);
+        Car k5 = new K5(13);
 
         // then
         assertThat(k5.getTripDistance()).isEqualTo(13);
@@ -19,7 +19,7 @@ public class CarTest {
     @Test
     void avanteTest() {
         // given
-        Avante avante = new Avante(15);
+        Car avante = new Avante(15);
 
         // then
         assertThat(avante.getTripDistance()).isEqualTo(15);
@@ -29,7 +29,7 @@ public class CarTest {
     @Test
     void sonataTest() {
         // given
-        Sonata sonata = new Sonata(10);
+        Car sonata = new Sonata(10);
 
         // then
         assertThat(sonata.getTripDistance()).isEqualTo(10);

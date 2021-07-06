@@ -2,6 +2,7 @@ package car;
 
 public class Sonata extends Car {
     private final double FUEL_EFFICIENCY = 10;
+    private final String NAME = "Sonata";
 
     public Sonata(double tripDistance) {
         super(tripDistance);
@@ -9,16 +10,16 @@ public class Sonata extends Car {
 
     @Override
     double getDistancePerLitter() {
-        return 0;
+        return tripDistance / FUEL_EFFICIENCY;
     }
 
     @Override
     double getTripDistance() {
-        return 0;
+        return tripDistance;
     }
 
     @Override
     String getName() {
-        return null;
+        return this.NAME;
     }
 }
