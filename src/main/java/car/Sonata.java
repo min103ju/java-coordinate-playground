@@ -10,7 +10,7 @@ public class Sonata extends Car {
 
     @Override
     double getDistancePerLitter() {
-        return tripDistance / FUEL_EFFICIENCY;
+        return FUEL_EFFICIENCY;
     }
 
     @Override

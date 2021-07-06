@@ -10,7 +10,7 @@ public class K5 extends Car {
 
     @Override
     double getDistancePerLitter() {
-        return tripDistance / FUEL_EFFICIENCY;
+        return FUEL_EFFICIENCY;
     }
 
     @Override
