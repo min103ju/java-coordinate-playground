@@ -6,12 +6,12 @@ public class CoordinatesLine {
     private final String OPEN_PARENTHESES = "(";
     private final String CLOSE_PARENTHESES = ")";
     private final String SEPARATORS = ",";
-    private final XCoordinate xCoordinate;
-    private final YCoordinate yCoordinate;
+    private final PointX pointX;
+    private final PointY pointY;
 
     public CoordinatesLine(String input) {
-        this.xCoordinate = new XCoordinate(changeCoordinate(input, 0));
-        this.yCoordinate = new YCoordinate(changeCoordinate(input, 1));
+        this.pointX = new PointX(changeCoordinate(input, 0));
+        this.pointY = new PointY(changeCoordinate(input, 1));
     }
 
     public int changeCoordinate(String input, int index) {
@@ -21,11 +21,11 @@ public class CoordinatesLine {
         return Integer.parseInt(input.split(SEPARATORS)[index]);
     }
 
-    public XCoordinate getxCoordinate() {
-        return xCoordinate;
+    public PointX getPointX() {
+        return pointX;
     }
 
-    public YCoordinate getyCoordinate() {
-        return yCoordinate;
+    public PointY getPointY() {
+        return pointY;
     }
 }

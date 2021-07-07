@@ -1,7 +1,6 @@
 package coordinates.line;
 
 import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -9,19 +8,28 @@ public class CoordinatesLineLineTest {
 
 
     @Test
-    void getPointValue() {
+    void getPointCalculateValueTest() {
+        // given
+        PointX a = new PointX(2);
+        PointX b = new PointX(1);
+
+        // when
+        int result = a.calculate(b);
+
+        // then
+        assertThat(result).isEqualTo(1);
 
     }
 
     @Test
-    void validateCoordinate() {
+    void validateCoordinateTest() {
         // given & then
         assertThatThrownBy(() -> {
-            new XCoordinate(25);
+            new PointX(25);
         }).isInstanceOf(IllegalArgumentException.class);
 
         assertThatThrownBy(() -> {
-            new YCoordinate(25);
+            new PointY(25);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -31,8 +39,8 @@ public class CoordinatesLineLineTest {
         CoordinatesLine coordinatesLine = new CoordinatesLine("(10,1)");
 
         // then
-        assertThat(coordinatesLine.getxCoordinate()).isEqualTo(new XCoordinate(10));
-        assertThat(coordinatesLine.getyCoordinate()).isEqualTo(new YCoordinate(1));
+        assertThat(coordinatesLine.getPointX()).isEqualTo(new PointX(10));
+        assertThat(coordinatesLine.getPointY()).isEqualTo(new PointY(1));
 
     }
 }
