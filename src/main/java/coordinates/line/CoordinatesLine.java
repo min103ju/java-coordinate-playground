@@ -30,9 +30,7 @@ public class CoordinatesLine {
     }
 
     public double getDistance(CoordinatesLine otherCoordinates) {
-        double sqrt = Math.sqrt(this.pointX.calculate(otherCoordinates.pointX)
+        return Math.sqrt(this.pointX.calculate(otherCoordinates.pointX)
                 + this.pointY.calculate(otherCoordinates.pointY));
-
-        return Math.round(sqrt * 1_000_000d) / 1_000_000d;
     }
 }
