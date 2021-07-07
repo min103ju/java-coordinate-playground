@@ -7,11 +7,20 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class CoordinatesLineLineTest {
 
+
+    @Test
+    void getPointValue() {
+
+    }
+
     @Test
     void validateCoordinate() {
         // given & then
         assertThatThrownBy(() -> {
-//            new XCoordinate(25);
+            new XCoordinate(25);
+        }).isInstanceOf(IllegalArgumentException.class);
+
+        assertThatThrownBy(() -> {
             new YCoordinate(25);
         }).isInstanceOf(IllegalArgumentException.class);
     }
