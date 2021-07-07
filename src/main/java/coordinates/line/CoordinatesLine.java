@@ -14,7 +14,7 @@ public class CoordinatesLine {
         this.pointY = new PointY(changeCoordinate(input, 1));
     }
 
-    public int changeCoordinate(String input, int index) {
+    private int changeCoordinate(String input, int index) {
         input = input.replace(OPEN_PARENTHESES, DELETE_CHARACTER)
                    .replace(CLOSE_PARENTHESES, DELETE_CHARACTER);
 
@@ -27,5 +27,12 @@ public class CoordinatesLine {
 
     public PointY getPointY() {
         return pointY;
+    }
+
+    public double getDistance(CoordinatesLine otherCoordinates) {
+        double sqrt = Math.sqrt(this.pointX.calculate(otherCoordinates.pointX)
+                + this.pointY.calculate(otherCoordinates.pointY));
+
+        return Math.round(sqrt * 1_000_000d) / 1_000_000d;
     }
 }
