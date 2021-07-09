@@ -24,5 +24,7 @@ public class InputView {
                 System.out.println("e.getMessage() = " + e.getMessage());
             }
         }
+
+        System.out.println(ResultView.generateGraph(list.get(0), list.get(1)));
     }
 }

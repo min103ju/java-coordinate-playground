@@ -1,5 +1,10 @@
 package view;
 
+import coordinates.line.CoordinatesLine;
+import coordinates.line.PointY;
+
+import java.util.List;
+
 public class ResultView {
     private static final String X_AXIS_WHITE_SPACE = "   ";
     private static final String Y_AXIS_WHITE_SPACE = "  |";
@@ -10,12 +15,13 @@ public class ResultView {
     private static final String NONE = "";
     private static final int LOOP_COUNT = 24;
 
-    public static String generateGraph(int x, int y) {
+    public static String generateGraph(CoordinatesLine coordinateA, CoordinatesLine coordinateB) {
+        StringBuilder result = new StringBuilder();
         StringBuilder yAxis = new StringBuilder();
         StringBuilder xAxis = new StringBuilder();
 
         for (int i = LOOP_COUNT; i >= 1; i--) {
-            yAxis.append(addyAxis(i) + checkPointCoordinate(x, y, i)+ "\n");
+            yAxis.append(addyAxis(i) + checkPointCoordinate(coordinateA, coordinateB, i)+ "\n");
         }
 
         yAxis.append(ORIGIN);
@@ -33,8 +39,12 @@ public class ResultView {
         }
 
         yAxis.append(xAxis.toString());
+        result.append(yAxis.toString());
 
-        return yAxis.toString();
+        result.append("\n\n");
+        result.append("두 점 사이의 거리는 " + coordinateA.getDistance(coordinateB));
+
+        return result.toString();
     }
 
     private static String addxLessTen(int number) {
@@ -81,10 +91,15 @@ public class ResultView {
         return builder.toString();
     }
 
-    public static String checkPointCoordinate(int x, int y, int loopCount) {
-        if (y == loopCount) {
-            return pointCoordinate(x);
+    private static String checkPointCoordinate(CoordinatesLine coordinateA, CoordinatesLine coordinateB, int loopCount) {
+        if (coordinateA.getPointY().equals(new PointY(loopCount))) {
+            return pointCoordinate(coordinateA.getPointX().getPoint());
         }
+
+        if (coordinateB.getPointY().equals(new PointY(loopCount))) {
+            return pointCoordinate(coordinateB.getPointX().getPoint());
+        }
+
         return NONE;
     }
 }
