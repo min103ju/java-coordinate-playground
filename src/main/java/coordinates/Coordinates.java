@@ -12,9 +12,14 @@ public abstract class Coordinates {
     protected final Point pointX;
     protected final Point pointY;
 
-    public Coordinates(String input) {
+    protected Coordinates(String input) {
         this.pointX = new Point(changeCoordinate(input, 0));
         this.pointY = new Point(changeCoordinate(input, 1));
+    }
+
+    protected Coordinates(int x, int y) {
+        this.pointX = new Point(x);
+        this.pointY = new Point(y);
     }
 
     private int changeCoordinate(String input, int index) {
