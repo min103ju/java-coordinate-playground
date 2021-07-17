@@ -16,14 +16,14 @@ public class CoordinatesLineTest {
         double distance = coordinatesA.getDistance(coordinatesB);
 
         // then
-        assertThat(distance).isEqualTo(6.403124d);
+        assertThat(distance).isEqualTo(6.4031242374328485d);
     }
 
     @Test
     void getPointYCalculateValueTest() {
         // given
-        PointY a = new PointY(2);
-        PointY b = new PointY(1);
+        Point a = new Point(2);
+        Point b = new Point(1);
 
         // when
         int result = a.calculate(b);
@@ -35,8 +35,8 @@ public class CoordinatesLineTest {
     @Test
     void getPointXCalculateValueTest() {
         // given
-        PointX a = new PointX(2);
-        PointX b = new PointX(1);
+        Point a = new Point(2);
+        Point b = new Point(1);
 
         // when
         int result = a.calculate(b);
@@ -49,11 +49,11 @@ public class CoordinatesLineTest {
     void validateCoordinateTest() {
         // given & then
         assertThatThrownBy(() -> {
-            new PointX(25);
+            new Point(25);
         }).isInstanceOf(IllegalArgumentException.class);
 
         assertThatThrownBy(() -> {
-            new PointY(-1);
+            new Point(-1);
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -63,8 +63,8 @@ public class CoordinatesLineTest {
         CoordinatesLine coordinatesLine = new CoordinatesLine("(10,1)");
 
         // then
-        assertThat(coordinatesLine.getPointX()).isEqualTo(new PointX(10));
-        assertThat(coordinatesLine.getPointY()).isEqualTo(new PointY(1));
+        assertThat(coordinatesLine.getPointX()).isEqualTo(new Point(10));
+        assertThat(coordinatesLine.getPointY()).isEqualTo(new Point(1));
 
     }
 }

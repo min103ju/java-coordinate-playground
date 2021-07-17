@@ -1,9 +1,7 @@
 package view;
 
 import coordinates.line.CoordinatesLine;
-import coordinates.line.PointY;
-
-import java.util.List;
+import coordinates.line.Point;
 
 public class ResultView {
     private static final String X_AXIS_WHITE_SPACE = "   ";
@@ -92,11 +90,11 @@ public class ResultView {
     }
 
     private static String checkPointCoordinate(CoordinatesLine coordinateA, CoordinatesLine coordinateB, int loopCount) {
-        if (coordinateA.getPointY().equals(new PointY(loopCount))) {
+        if (coordinateA.getPointY().equals(new Point(loopCount))) {
             return pointCoordinate(coordinateA.getPointX().getPoint());
         }
 
-        if (coordinateB.getPointY().equals(new PointY(loopCount))) {
+        if (coordinateB.getPointY().equals(new Point(loopCount))) {
             return pointCoordinate(coordinateB.getPointX().getPoint());
         }
 

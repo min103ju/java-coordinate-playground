@@ -2,10 +2,10 @@ package coordinates.line;
 
 import java.util.Objects;
 
-public class PointX {
+public class Point {
     private final int point;
 
-    public PointX(int point) {
+    public Point(int point) {
         validatePoint(point);
         this.point = point;
     }
@@ -24,20 +24,20 @@ public class PointX {
         return point;
     }
 
+    public int calculate(Point b) {
+        return (int) Math.pow(this.point - b.point, 2);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PointX that = (PointX) o;
-        return point == that.point;
+        Point point1 = (Point) o;
+        return point == point1.point;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(point);
-    }
-
-    public int calculate(PointX b) {
-        return (int) Math.pow(this.point - b.point, 2);
     }
 }
