@@ -2,9 +2,9 @@ package coordinates.line;
 
 import coordinates.Coordinates;
 
-public class CoordinatesLine extends Coordinates {
+public class LineCoordinates extends Coordinates {
 
-    public CoordinatesLine(String input) {
+    public LineCoordinates(String input) {
         super(input);
     }
 

@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class CoordinatesLineTest {
+public class LineCoordinatesTest {
 
     @Test
     void getCalculateCoordinateTest() {
         // given
-        CoordinatesLine coordinatesA = new CoordinatesLine("(10,10)");
-        CoordinatesLine coordinatesB = new CoordinatesLine("(14,15)");
+        LineCoordinates coordinatesA = new LineCoordinates("(10,10)");
+        LineCoordinates coordinatesB = new LineCoordinates("(14,15)");
 
         // when
         double distance = coordinatesA.getDistance(coordinatesB);
@@ -60,11 +60,11 @@ public class CoordinatesLineTest {
     @Test
     void changeInputTest() {
         // given
-        CoordinatesLine coordinatesLine = new CoordinatesLine("(10,1)");
+        LineCoordinates lineCoordinates = new LineCoordinates("(10,1)");
 
         // then
-        assertThat(coordinatesLine.getPointX()).isEqualTo(new Point(10));
-        assertThat(coordinatesLine.getPointY()).isEqualTo(new Point(1));
+        assertThat(lineCoordinates.getPointX()).isEqualTo(new Point(10));
+        assertThat(lineCoordinates.getPointY()).isEqualTo(new Point(1));
 
     }
 }

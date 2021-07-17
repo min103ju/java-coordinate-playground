@@ -1,6 +1,6 @@
 package view;
 
-import coordinates.line.CoordinatesLine;
+import coordinates.line.LineCoordinates;
 import coordinates.line.Point;
 
 public class ResultView {
@@ -13,7 +13,7 @@ public class ResultView {
     private static final String NONE = "";
     private static final int LOOP_COUNT = 24;
 
-    public static String generateGraph(CoordinatesLine coordinateA, CoordinatesLine coordinateB) {
+    public static String generateGraph(LineCoordinates coordinateA, LineCoordinates coordinateB) {
         StringBuilder result = new StringBuilder();
         StringBuilder yAxis = new StringBuilder();
         StringBuilder xAxis = new StringBuilder();
@@ -89,7 +89,7 @@ public class ResultView {
         return builder.toString();
     }
 
-    private static String checkPointCoordinate(CoordinatesLine coordinateA, CoordinatesLine coordinateB, int loopCount) {
+    private static String checkPointCoordinate(LineCoordinates coordinateA, LineCoordinates coordinateB, int loopCount) {
         if (coordinateA.getPointY().equals(new Point(loopCount))) {
             return pointCoordinate(coordinateA.getPointX().getPoint());
         }

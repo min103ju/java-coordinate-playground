@@ -1,6 +1,6 @@
 package view;
 
-import coordinates.line.CoordinatesLine;
+import coordinates.line.LineCoordinates;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,12 +13,12 @@ public class InputView {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("좌표를 입력하세요.");
         String inputValue = br.readLine();
-        List<CoordinatesLine> list = new ArrayList<>();
+        List<LineCoordinates> list = new ArrayList<>();
 
         int idx = 0;
         while (true && idx < 2) {
             try {
-                list.add(new CoordinatesLine(inputValue.split("-")[idx]));
+                list.add(new LineCoordinates(inputValue.split("-")[idx]));
                 idx++;
             } catch (IllegalArgumentException e) {
                 System.out.println("e.getMessage() = " + e.getMessage());
