@@ -11,8 +11,4 @@ public class RectangleCoordinates extends Coordinates {
         super(x, y);
     }
 
-    public boolean isDiffer(RectangleCoordinates rectangleB) {
-        return !this.pointX.equals(rectangleB.pointX) &&
-                !this.pointY.equals(rectangleB.pointY);
-    }
 }
