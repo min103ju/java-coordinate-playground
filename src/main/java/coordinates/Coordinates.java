@@ -1,7 +1,5 @@
 package coordinates;
 
-import coordinates.line.Point;
-
 public abstract class Coordinates {
 
     private final String DELETE_CHARACTER = "";

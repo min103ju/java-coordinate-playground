@@ -11,4 +11,17 @@ public class RectangleCoordinates extends Coordinates {
         super(x, y);
     }
 
+    public double getHeight(RectangleCoordinates rectangleCoordinates) {
+        if (!this.pointX.equals(rectangleCoordinates.pointX) && this.pointY.equals(rectangleCoordinates.pointY)) {
+            return this.getDistance(rectangleCoordinates);
+        }
+        return 0;
+    }
+
+    public double getWidth(RectangleCoordinates rectangleCoordinates) {
+        if (this.pointX.equals(rectangleCoordinates.pointX) && !this.pointY.equals(rectangleCoordinates.pointY)) {
+            return this.getDistance(rectangleCoordinates);
+        }
+        return 0;
+    }
 }

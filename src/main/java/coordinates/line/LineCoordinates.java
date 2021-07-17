@@ -1,6 +1,7 @@
 package coordinates.line;
 
 import coordinates.Coordinates;
+import coordinates.Point;
 
 public class LineCoordinates extends Coordinates {
 

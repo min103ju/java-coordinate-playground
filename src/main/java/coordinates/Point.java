@@ -1,4 +1,4 @@
-package coordinates.line;
+package coordinates;
 
 import java.util.Objects;
 

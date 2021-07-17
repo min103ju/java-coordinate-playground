@@ -1,7 +1,7 @@
 package view;
 
 import coordinates.line.LineCoordinates;
-import coordinates.line.Point;
+import coordinates.Point;
 
 public class ResultView {
     private static final String X_AXIS_WHITE_SPACE = "   ";
