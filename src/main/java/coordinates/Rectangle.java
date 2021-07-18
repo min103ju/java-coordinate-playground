@@ -20,7 +20,7 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public double area() {
+    public double getCalculateResult() {
         return 0;
     }
 }

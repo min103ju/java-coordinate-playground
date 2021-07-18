@@ -9,5 +9,5 @@ public interface Figure {
 
     String getName();
 
-    double area();
+    double getCalculateResult();
 }
