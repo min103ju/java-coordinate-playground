@@ -17,7 +17,7 @@ public class PointTest {
         double distance = point1.getDistance(point2);
 
         // then
-        assertThat(distance).isEqualTo(6.4031242374328485d);
+        assertThat(distance).isEqualTo(6.4031242374328485D);
     }
 
     @Test

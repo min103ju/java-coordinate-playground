@@ -21,6 +21,6 @@ public class Line extends AbstractFigure {
 
     @Override
     public double getCalculateResult() {
-        return 0;
+        return getPoint(0).getDistance(getPoint(1));
     }
 }

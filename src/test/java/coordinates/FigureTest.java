@@ -23,6 +23,23 @@ public class FigureTest {
     }
 
     @Test
+    void triangle_삼각형_넓이구하기_test() {
+        // given
+        Figure figure = FigureFactory.getInstance(Arrays.asList(
+                new Point(10, 10),
+                new Point(14, 15),
+                new Point(20, 8)
+        ));
+
+        // when
+        double result = figure.getCalculateResult();
+
+        // then
+        assertThat(result).isEqualTo(29D);
+
+    }
+
+    @Test
     void figure_삼각형_생성_test() {
         // given && when
         Figure figure = FigureFactory.getInstance(Arrays.asList(
@@ -33,6 +50,24 @@ public class FigureTest {
 
         // then
         assertThat(figure).isInstanceOf(Triangle.class);
+    }
+
+    @Test
+    void line_길이구하기_test() {
+        // given
+        Line line = new Line(
+                Arrays.asList(
+                        Point.of(10, 10),
+                        Point.of(14, 15)
+                )
+        );
+
+        // when
+        double distance = line.getCalculateResult();
+
+        // then
+        assertThat(distance).isEqualTo(6.4031242374328485D);
+
     }
 
     @Test
